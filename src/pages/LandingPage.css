@@ -1,0 +1,143 @@
+/* LandingPage.css D:\Web project\Front-end\frontend\src\pages\LandingPage.css*/
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box; /* Ensure padding and borders are included in width/height */
+}
+
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.logo {
+  width: 100px; /* Adjust logo size */
+  height: auto;
+}
+
+.logo-text {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #003366;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  animation: fadeIn 2s ease-out;
+}
+
+.main-title {
+  font-size: 3rem;
+  color: #003366;
+  margin-bottom: 20px;
+  animation: slideIn 1s ease-out;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 30px;
+  animation: slideIn 1.2s ease-out;
+}
+
+.button-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center; /* Ensure buttons are centered */
+}
+
+.cta-button,
+.learn-more-button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button {
+  background-color: #003366;
+  color: white;
+  animation: slideIn 1.5s ease-out;
+}
+
+.cta-button:hover {
+  background-color: #005599;
+  transform: scale(1.05);
+}
+
+.learn-more-button {
+  background-color: #0066cc;
+  color: white;
+  animation: slideIn 1.7s ease-out;
+}
+
+.learn-more-button:hover {
+  background-color: #3388cc;
+  transform: scale(1.05);
+}
+
+.branding {
+  margin-top: 40px;
+  color: #333;
+  font-size: 1.2rem;
+  animation: fadeIn 2.5s ease-out;
+}

@@ -1,0 +1,243 @@
+/* AuthPage.css */
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #000000; /* Black background */
+    color: #f0f0f0; /* Light text for readability */
+    overflow: hidden;
+  }
+  
+  /* Full Screen Background */
+  .auth-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: #000000; /* Black background for the whole page */
+    padding: 20px;
+    animation: backgroundAnimation 12s ease-in-out infinite;
+    text-align: center;
+    position: relative;
+  }
+  
+  /* Logo Styling */
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px; /* Space between the logo and the rest of the content */
+    animation: fadeInDown 1.5s ease-out;
+  }
+  
+  .logo-container img {
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  /* Heading Styling */
+  h2 {
+    font-size: 3.5rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 2.5s ease-out;
+  }
+  
+  /* Google Login Button */
+  .google-btn {
+    background: #e50914; /* Netflix red */
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 30px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .google-btn:hover {
+    background: #b20710; /* Darker red */
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+  }
+  
+  .google-btn:disabled {
+    background-color: #d3d3d3;
+    cursor: not-allowed;
+  }
+  
+  /* Divider Text */
+  .divider {
+    font-size: 1.4rem;
+    color: #e0e0e0;
+    opacity: 0.7;
+    margin: 30px 0;
+    text-align: center;
+    animation: fadeInUp 2.5s ease-out;
+  }
+  
+  /* Email Form Container */
+  .email-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    padding: 0 10px;
+    animation: fadeInUp 2s ease-out;
+  }
+  
+  /* Form Inputs Styling */
+  .email-form input {
+    padding: 18px;
+    margin-bottom: 22px;
+    border: 2px solid #757575;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #e0e0e0;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .email-form input:focus {
+    border-color: #ff4081; /* Light pink/red on focus */
+    box-shadow: 0 0 20px rgba(255, 64, 129, 0.8);
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-5px);
+  }
+  
+  /* Submit Button Styling */
+  .email-form button {
+    padding: 18px;
+    background: #e50914; /* Red button */
+    color: white;
+    border: none;
+    font-size: 1.4rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    transform: scale(1);
+  }
+  
+  .email-form button:hover {
+    background: #b20710; /* Darker red on hover */
+    transform: scale(1.05);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  }
+  
+  .email-form button:disabled {
+    background-color: #d3d3d3;
+    cursor: not-allowed;
+  }
+  
+  /* Forgot Password Link Styling */
+  .forgot-password {
+    color: #ff4081; /* Light Red for links */
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .forgot-password:hover {
+    color: #f50057; /* Darker red on hover */
+    transform: scale(1.05);
+  }
+  
+  /* Toggle Sign Up / Login Link */
+  .toggle-auth {
+    color: #ff4081;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 30px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .toggle-auth:hover {
+    color: #f50057;
+    transform: scale(1.05);
+  }
+  
+  /* Error Message Styling */
+  .error-message {
+    color: #e74c3c; /* Red for errors */
+    font-size: 1.4rem;
+    margin-top: 20px;
+    text-align: center;
+    animation: shake 0.5s ease-out;
+  }
+  
+  /* Background Animation (Color Shifting) */
+  @keyframes backgroundAnimation {
+    0% {
+      background: #000000;
+    }
+    50% {
+      background: #222222; /* Slightly lighter black */
+    }
+    100% {
+      background: #000000;
+    }
+  }
+  
+  /* Fade-in Animations */
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  /* Logo Styling */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px; /* Adds space between the logo and other elements */
+    animation: fadeInDown 1.5s ease-out;
+  }
+  
+  .logo-container img {
+    width: 120px; /* Adjust the size of the logo */
+    height: auto;
+    object-fit: contain;
+  }
+  
+  
